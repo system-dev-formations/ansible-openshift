@@ -45,3 +45,7 @@
     - pyopenssl
     - ndg-httpsclient
     - pyasn1
+- name: Add {{ ansible_user}} to group docker
+  user: name={{ ansible_user }}
+        group=docker
+        append=yes
